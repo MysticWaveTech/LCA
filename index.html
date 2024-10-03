@@ -1,0 +1,183 @@
+<link href="https://fonts.googleapis.com/css2?family=Hanalei+Fill&display=swap" rel="stylesheet">
+
+
+<style>
+    
+    body{background-color: orange; text-align: center; background-image: url('https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/geometry-7741146_1280.webp');}
+    
+    a img{
+        max-width: 50px;
+        border: 10px solid darkblue;
+    }
+    
+    a {
+    color: red;
+    font-size: 25px;
+        background-color: black;
+        border: 10px solid cyan;
+        display: block;
+        margin: 10px;
+        font-family: 'Hanalei Fill', cursive;
+        padding: 10px;
+        max-width: 280px;
+        float: left;
+    }
+    
+    
+      .knobs-container{
+        touch-action: none; /* Prevent default touch actions like scrolling */
+    text-align: center;
+        border: 1px solid red;
+    }
+     .knobs-container {
+    display: flex;
+    gap: 10px; /* Adjust spacing between knobs if needed */
+}
+
+.knob {
+    width: 150px;
+    height: 150px;
+    background-image: url('https://raw.githubusercontent.com/MysticWaveTech/SubliminalAffirmatiinsRadionics/main/audio-35447_1280%20(1).png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    cursor: pointer; /* Indicate that it's draggable */
+    transform-origin: center center; /* Ensure rotation happens around the center */
+    transition: transform 0.1s; /* Smooth transformation */
+}
+            
+    #knobs{
+        float: right;
+        clear: both;
+        border: 10px solid red;
+        max-width: 280px;
+        background-color: cyan;
+    }
+    
+    h1{
+        
+        font-family: 'Hanalei Fill', cursive;
+        color: orange;
+        font-size: 100px;
+        font-weight: normal;
+        text-align: right;
+    }
+    
+</style>
+
+<div style="max-width: 250px; height: 250px; clear: both; background-image: url('https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/heart-4035036_1280.webp'); background-repeat: no-repeat;  /* Prevent the image from repeating */
+    background-size: cover;         /* Cover the entire background */
+    ">
+    
+   <h1>
+       
+       Radionics
+       
+   </h1>
+</div>
+
+
+
+<a target="_blank" href="
+teleportation58619.html
+"><br>Teleportation🌀
+<br><br>
+<img src="https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/button-6940519_1280%20(1).png"/>
+</a>
+<a target="_blank" href="
+telekinesis60480.html
+">
+<br>
+Telekinesis🙌
+<br><br>
+<img src="https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/button-6940519_1280%20(1).png"/>
+
+</a>
+<a target="_blank" href="
+materialisation24606.html
+">
+<br>
+Materialisation👻
+<br><br>
+<img src="https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/button-6940519_1280%20(1).png"/>
+</a>
+<a target="_blank" href="
+shapeshifting78283.html
+">
+<br>
+Shapeshifting👹
+<br><br>
+<img src="https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/button-6940519_1280%20(1).png"/>
+</a>
+<a target="_blank" href="
+Invincibility70408.html
+">
+<br>
+Invincibility🦾
+<br><br>
+<img src="https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/button-6940519_1280%20(1).png"/>
+</a>
+
+<div style="max-width: 250px; height: 250px; clear: both;; background-image: url('https://raw.githubusercontent.com/MysticWaveTech/LowCostApps/refs/heads/main/blood-clot-7118517_1280.webp');"">
+    
+    
+</div>
+<div id="knobs">
+    <div class="knob" id="knob1"></div>
+        
+       
+    
+</div>
+
+<h1>
+🧠
+
+           
+           🦷🦴
+       </h1>
+
+<script>
+    document.querySelectorAll('.knob').forEach(knob => {
+    let isDragging = false;
+    let initialAngle = 0;
+    let currentRotation = 0;
+
+    function startDrag(e) {
+        isDragging = true;
+        e.preventDefault(); // Prevent default touch actions
+        const touch = e.touches ? e.touches[0] : e; // Handle touch or mouse event
+        const rect = knob.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        initialAngle = Math.atan2(touch.clientY - centerY, touch.clientX - centerX);
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        const touch = e.touches ? e.touches[0] : e; // Handle touch or mouse event
+        const rect = knob.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const currentAngle = Math.atan2(touch.clientY - centerY, touch.clientX - centerX);
+        const deltaAngle = currentAngle - initialAngle;
+        currentRotation += deltaAngle * (180 / Math.PI);
+        knob.style.transform = `rotate(${currentRotation}deg)`;
+        initialAngle = currentAngle; // Update initialAngle for continuous rotation
+    }
+
+    function endDrag() {
+        isDragging = false;
+    }
+
+    // Add event listeners for mouse
+    knob.addEventListener('mousedown', startDrag);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', endDrag);
+
+    // Add event listeners for touch
+    knob.addEventListener('touchstart', startDrag);
+    document.addEventListener('touchmove', drag);
+    document.addEventListener('touchend', endDrag);
+});
+    
+</script>
