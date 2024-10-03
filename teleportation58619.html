@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radionics Teleportation App</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #808080; /* Gray background */
+        color: #ff851b; /* Orange text */
+        text-align: center;
+    }
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+.button {
+    background-color: #00ffff; /* Cyan button */
+    color: darkblue;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border: 1px solid #00cccc; /* Slightly darker cyan border */
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 8px;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.6), inset -2px -2px 5px rgba(0, 0, 0, 0.2), 
+                3px 3px 10px rgba(0, 0, 0, 0.2); /* Inner and outer bevel */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Drop shadow for text */
+}
+    
+    .button:hover {
+        background-color: #00cccc; /* Slightly darker cyan on hover */
+    }
+    .manifestation {
+        margin-top: 40px;
+    }
+    .meter {
+        height: 20px;
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-top: 20px;
+    }
+    .fill {
+        width: 0;
+        height: 100%;
+        background-color: #00ffff; /* Cyan progress bar */
+        border-radius: 10px;
+        transition: width 1s;
+    }
+    .ability-check {
+        margin-top: 20px;
+    }
+    .visualization {
+        margin-top: 30px;
+        font-size: 20px;
+        background-color: #001f3f; /* Dark blue background for the visualization box */
+        padding: 20px;
+        border-radius: 10px;
+        color: #ff851b; /* Orange text inside the visualization box */
+    }
+    .visualization p {
+        margin: 10px 0;
+    }
+    
+    .container {
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Manifest Teleportation Ability</h1>
+        <p>Activate your intent and visualize teleportation. Focus your energy and progress toward manifesting your ability.</p>
+        
+        <!-- Radionics Activation Button -->
+        <button class="button" onclick="activateTeleportation()">Activate Radionics for Teleportation</button>
+
+        <!-- Manifestation Energy Meter -->
+        <div class="manifestation">
+            <h2>Manifestation Energy</h2>
+            <div class="meter">
+                <div class="fill" id="energyFill"></div>
+            </div>
+        </div>
+
+        <!-- Visualization Instructions -->
+        <div class="visualization">
+            <h2>Teleportation Visualization</h2>
+            <p>1. Close your eyes and visualize the space around you bending or folding.</p>
+            <p>2. Imagine yourself fading from your current location, feeling your atoms dissolving into the quantum space.</p>
+            <p>3. See yourself reappearing at your destination, as if time and space are one. Feel the energy shift as you arrive.</p>
+            <p>4. Hold this visualization until you feel the energy resonating within your body.</p>
+        </div>
+
+        <!-- Abilities Tracker -->
+        <div class="ability-check">
+            <h2>Manifestation Tracker</h2>
+            <input type="checkbox" id="teleportCheckbox" onclick="trackAbility()"> I feel my teleportation ability manifesting
+        </div>
+    </div>
+
+    <script>
+        let progress = 0;
+        
+        function activateTeleportation() {
+            // Increase manifestation energy
+            const fill = document.getElementById('energyFill');
+            if (progress < 100) {
+                progress += 10;
+                fill.style.width = progress + '%';
+            }
+
+            // Show ability manifesting message if fully charged
+            if (progress >= 100) {
+                alert("Your teleportation ability is ready to manifest! Focus and continue visualizing.");
+            }
+        }
+
+        function trackAbility() {
+            const checkbox = document.getElementById('teleportCheckbox');
+            if (checkbox.checked) {
+                alert("You have begun manifesting teleportation ability. Stay focused and trust the process.");
+            } else {
+                alert("Continue working on manifesting your ability.");
+            }
+        }
+    </script>
+</body>
+</html>
